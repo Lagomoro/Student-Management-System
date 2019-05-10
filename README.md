@@ -43,6 +43,7 @@ In this course design experiment, I not only completed the required functions, b
 All interfaces are implemented using related classes in javax.swing. I encapsulate a lot of components that extends from the swing package, and override the paintComponent function to make the interface more beautiful.  
 #### 1.3.1 Basic functions
 ##### Login frame
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/1.png)
 ##### Notice of class
 ##### Functions: send notice, delete notice (Administrator privileges), send photos, the simple layout of the document, import HTML document.
 Users are not allowed to register and choose classes by themselves, Only the database administrator can import username and class info. This is also the characteristics of the class management system.  
