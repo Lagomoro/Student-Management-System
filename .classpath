@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="E:/JAVA_api"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/JAVA_api/mysql-connector-java-8.0.15.jar"/>
+	<classpathentry kind="lib" path="E:/JAVA_api/jpen-2.jar"/>
+	<classpathentry kind="lib" path="E:/JAVA_api/gson-2.8.5.jar"/>
+	<classpathentry kind="lib" path="E:/JAVA_api/commons-codec-1.12.jar"/>
+	<classpathentry kind="lib" path="E:/JAVA_api/commons-math3-3.6.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
