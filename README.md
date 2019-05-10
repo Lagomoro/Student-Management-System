@@ -191,19 +191,19 @@ The text editor seems to be the most complicated function, but because it uses H
 Instant spectrum display requires the application of a fast Fourier transform.  
 First, using a window function on the WAV waveform to get a sampling, and then apply fast Fourier transform to obtain a set of discrete data, which is the spectrum of the signal. after some calculate, it can be displayed on the interface and become the spectrum map that everyone sees.  
 ## Imported JAVA library:  
-commons-codec-1.12.jar http://commons.apache.org/proper/commons-codec/  
+#### commons-codec-1.12.jar http://commons.apache.org/proper/commons-codec/  
 LICENSE: Apache License 2.0  
 For Base64 and MD5 decode.  
-commons-math3-3.6.1.har http://commons.apache.org/proper/commons-math/  
+#### commons-math3-3.6.1.har http://commons.apache.org/proper/commons-math/  
 LICENSE: Apache License 2.0  
 For Fast Fourier Transform Operation.  
-gson-2.8.5.jar https://github.com/google/gson  
+#### gson-2.8.5.jar https://github.com/google/gson  
 LICENSE: Apache License 2.0  
 For send json between server and client  
-jpen-2.jar (jpen-2-3-64.dll) https://sourceforge.net/projects/jpen/  
+#### jpen-2.jar (jpen-2-3-64.dll) https://sourceforge.net/projects/jpen/  
 LICENSE: GNU Library or Lesser General Public License version 2.0 (LGPLv2)  
 For getting pen pressure with digital tablet.  
-mysql-connector-java-8.0.15.jar https://www.mysql.com/  
+#### mysql-connector-java-8.0.15.jar https://www.mysql.com/  
 LICENSE: https://www.oracle.com/legal/terms.html  
 For connecting MySQLdatabase.  
 ## References
