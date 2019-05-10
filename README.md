@@ -48,24 +48,30 @@ All interfaces are implemented using related classes in javax.swing. I encapsula
 ##### Functions: send notice, delete notice (Administrator privileges), send photos, the simple layout of the document, import HTML document.
 Users are not allowed to register and choose classes by themselves, Only the database administrator can import username and class info. This is also the characteristics of the class management system.  
 You can enter the class chat or view the list of members by the Class Interface.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/2.png)
 Click the expand button of the notice list to expand the notice, then click it again to close. The notice list displays information such as the title of the notice, who have sent it, and when.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/3.png)
 In the notice list, if you are login as an administrator, the delete button is acquired. The button is only the interface, and there is another validation on the server side, that is, if it’s not the administrator login, and the delete button displayed by malicious modifying the client, then it’s useless to click. (That is same for the sensitive operations below, such as deleting files and perusals, or withdraw chats).  
 Administrators can also release notices to classmates.  
 The notice editor consists of a title area, a toolbar, and a text field. You can import files, insert pictures, undo, redo, set bold, italic, underline, delete line, superscript, subscript, change font face, font size, text color, and set four paragraph alignments (left alignment, center, right alignment, and justified).  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/4.png)
 When an image is being inserted, if the width of the image is larger than the width of the text field can be displayed, then it automatically scales to the appropriate width.  
 Import files allows you to import existing HTML documents. You can edit your notice in Microsoft Word, save it as an Html file, and then import to my notice editor.  
 ##### Administrator sensitive operation log
 Log model can detect sensitive operations, then generate a log file on the server side that logs the actions of the administrator. The permission administrators can only be imported in the background by the database administrator.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/5.png)
 In particular, only sensitive operations performed by administrators, that means not the operations can ordinary members do (such as releasing or deleting notices, deleting other people's files instead of own) will be recorded.  
 ##### Document perusal and vote with anonymity
 ##### Functions: send perusal, delete perusal, send photos, the simple layout of the document, import HTML document, anonymous comment, anonymous vote.
 The interface of perusal is similar to the notice interface.  
 Click the expand button to expand the circulated content. From top to bottom are the document content, voting area, and comment area.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/6.png)
 In the voting area, all options are displayed, along with the maximum number of choices allowed. It can be selected by clicking on the option button. If it is a single choice, other options will be automatically canceled when selecting. About multi-selected, the option can't be selected if the number you have selected reach the maximum. You must cancel at least one selected option to continue the selection.  
 Click release button to release your perusal. After the release, you will be able to see everyone's choices.  
 In the comment area, the text field is displayed. Comment has a limit of 150 words and can be sent by clicking release button. Anonymous comments will be displayed at the bottom of the perusal. The same user can comment multiple times.  
 When deleting a perusal, the publisher can delete the perusal that he or she has posted, the administrator can delete all the perusal.  
 Any class member can post a perusal. The Perusal Editor is similar to the Notice Editor with the option window added. You can add new options by clicking the add option button.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/7.png)
 Click the increase/decrease button to set the maximum number of choices, 1 for single selection. In particular, this maximum number cannot exceed the number of options in the options list (at least 1). If the delete option causes maximum number to be larger than the number of options, maximum number will be automatically reduced.  
 Click the move down button on the right of the option to move option down, or click delete button to delete it.  
 ##### File sharing (upload, download)
@@ -73,7 +79,9 @@ Click the move down button on the right of the option to move option down, or cl
 The file sharing interface allows you to view a list of files and upload/download files with your classmates.  
 Click send button, a selection box will pop up, you can choose and send the file.  
 Before sending the file, client calculates the MD5 value of the file and uploads it to the server, compare to the server files. If the file already exists (not limited in this class), you can upload the file in seconds. A map is generated in the database.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/8.png)
 During the upload process, real-time progress and speed will be displayed.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/9.png)
 Files that have already been uploaded can be downloaded and deleted.  
 The selection box will also pop up when downloading, and then similar to the upload, showing the real-time progress and speed.  
 Similar to perusal, users can delete files they upload, and administrators can delete all files. In particular, if there are multiple mappings for a file, only the corresponding mapping will be deleted. The file itself is deleted only if the mapping for the file is the remaining one.  
@@ -81,35 +89,49 @@ Similar to perusal, users can delete files they upload, and administrators can d
 ##### Functions: send message, chat bubble, withdraw message, send pictures and simple layout of documents.  
 Through the class interface, you can enter group chat.  
 The chatroom interface displays the username, chat bubble, and timestamp.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/10.png)
 Chat text editing can also implement simple format operations. When you add an image, it is automatically scaled to the appropriate size.  
 If the message is withdrawn, it won’t be shown. Users can withdraw their own messages and the administrator can withdraw all messages.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/11.png)
 ##### Instant messaging (private)
 Through the member list, you can enter chatroom and have private chats with class members.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/12.png)
 If the message is withdrawn, it won’t be shown. Users can withdraw their own messages.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/13.png)
 ##### Child windows
 Functions: multi-window, sequential exchange, drag scene across windows.  
 Based on WindowController, I implemented a multi-window operation. You can open a child window by clicking the multi-window button on the main interface.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/14.png)
 Users can drag scene tabs, change the order of tabs in the window, and move tabs to other windows.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/15.png)
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/16.png)
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/17.png)
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/18.png)
 There is no limit to the number of child windows that can be popped up.  
 #### 1.3.2 Additional funtions
 ##### Instant hand drawing: Paint and Guess
 ##### Functions: tablet support, instant drawing, simple vector lines.
 Enter the minigame interface, you can view Paint and Guess.  
 Enter the game room list, click on the existing room to enter, or click on the new room to create a gameroom.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/19.png)
 After the room is full, the game starts automatically.  
 The drawing side supports smoothing display, undo, clear screen, redo, recovery, stroke thickness, color and other functions. My drawing program supports digital device input and automatically recognizes pen pressure.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/20.png)
 The receiver will get three hints and answers respectively for the remaining 55 seconds, 50 seconds, 10 seconds and 5 seconds.  
 ##### Multi-language switching function
 ##### Functions: language switching, import language package.
 College students come from around the world. In particular, our Shandong University, as a world-famous college, must have foreign exchange students. And Taiwan Province of China is also accustomed to using traditional Chinese. As a mature class management system, how can there be no language switching function?  
 With the convenience of the MVC architecture, I made a language switching system. The language library storages on client, with the .ini file type, can be freely selected in the option interface. I wrote Simplified Chinese, Traditional Chinese, English and Japanese.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/21.png)
 What if friends from other countries want to use it? You can click Export Blank Language Pack to generate a blank language pack, fill up the banks, create more language libraries and share them with everyone!  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/22.png)
 Of course, students who like to be funny can also customize the client through the language library, for example, change the send button to "touch". Is it very interesting~?  
 ##### Music player
 ##### Functions: play, pause, real-time spectrum display
 Because I like listening music when I do my program, I really want to do some cool things, So I designed a music player.
 Click the play button to select wav format music for playing.  
 The interface will display the spectrum, playback progress, lyrics and song name in real time, and the title bar will have a colorful effect. There are also some other special effects. For the display of the spectrum, see 2.2.7.  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/23.png)
 Click the pause button to pause music.  
 Click the stop button to stop music.  
 ## Ⅱ Technical difficulties
@@ -208,6 +230,14 @@ For getting pen pressure with digital tablet.
 #### mysql-connector-java-8.0.15.jar https://www.mysql.com/  
 LICENSE: https://www.oracle.com/legal/terms.html  
 For connecting MySQLdatabase.  
+## Database configuration
+You only need to generate there tabels. Others will automatically generate when you input command:  
+##### insertUser \[username] \[password] \[nickname] \[image_data(EMPTY)] \[class_id] \[authority(0/1)]  
+##### insertClass \[classname]  
+see @ ConsoleController.java  
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/24.png)
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/25.png)
+![image](https://github.com/Lagomoro/Pictures/blob/master/Student-management-system/26.png)
 ## References
 Bruce Eckel〔M〕Thinking in JAVA, 机械工业出版社, 2007-06-01  
 JoshuaMarinacci/ChrisAdamson〔M〕Swing Hacks, O'ReillyMedia, 2005-06-30  
